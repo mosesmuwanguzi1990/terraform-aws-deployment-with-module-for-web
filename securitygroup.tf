@@ -15,6 +15,14 @@ module "security_group" {
       cidr_blocks = "0.0.0.0/0"
     }
   ]
+    egress_with_cidr_blocks = [
+    {
+      from_port   = 0
+      to_port     = 0
+      protocol    = "-1"
+      cidr_blocks = "0.0.0.0/0"
+    }
+  ]
 }
 
 module "security_group_vm" {
